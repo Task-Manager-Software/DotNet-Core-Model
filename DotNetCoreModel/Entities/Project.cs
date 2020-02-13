@@ -6,6 +6,7 @@ namespace DotNetCoreModel.Entities
     {
         public string Title { get; set; }
         public bool ShowCompletedTasks { get; set; }
+
         public IList<ProjectContributor> Accounts { get; set; }
         public IList<Task> Tasks { get; set; }
     }

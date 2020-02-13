@@ -2,10 +2,12 @@
 {
     public class TaskContributor : EntityBase
     {
-        public Account Account { get; set; }
         public int AccountId { get; set; }
-        public Task Task { get; set; }
+        public Account Account { get; set; }
+        
         public int TaskId { get; set; }
+        public Task Task { get; set; }
+        
         public bool IsAccepted { get; set; }
     }
 }
