@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DotNetCoreModel.Entities
+namespace Model.DotNetCore.Entities
 {
     public class Task : AuditableEntityBase
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DotNetCoreModel.Entities
+namespace Model.DotNetCore.Entities
 {
     public abstract class AuditableEntityBase : EntityBase
     {

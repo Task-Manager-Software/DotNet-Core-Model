@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace DotNetCoreModel.Entities
+namespace Model.DotNetCore.Entities
 {
     public abstract class EntityBase
     {

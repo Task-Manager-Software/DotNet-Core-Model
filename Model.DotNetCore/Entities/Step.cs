@@ -1,4 +1,4 @@
-﻿namespace DotNetCoreModel.Entities
+﻿namespace Model.DotNetCore.Entities
 {
     public class Step : AuditableEntityBase
     {
