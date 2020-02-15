@@ -1,12 +1,12 @@
 ﻿namespace Model.DotNetCore.Entities
 {
-    public class ProjectContributor : EntityBase
+    public class AccountProject : EntityBase
     {
         public int AccountId { get; set; }
-        public Account Account { get; set; }
+        virtual public Account Account { get; set; }
         
         public int ProjectId { get; set; }
-        public Project Project { get; set; }
+        virtual public Project Project { get; set; }
         
         public bool IsOwner { get; set; }
         public bool IsAccepted { get; set; }

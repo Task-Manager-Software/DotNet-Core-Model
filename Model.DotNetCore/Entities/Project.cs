@@ -7,7 +7,7 @@ namespace Model.DotNetCore.Entities
         public string Title { get; set; }
         public bool ShowCompletedTasks { get; set; }
 
-        public List<ProjectContributor> Accounts { get; set; }
-        public List<Task> Tasks { get; set; }
+        virtual public List<AccountProject> AccountProjects { get; set; }
+        virtual public List<Task> Tasks { get; set; }
     }
 }
