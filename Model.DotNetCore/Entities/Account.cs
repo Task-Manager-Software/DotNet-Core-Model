@@ -6,7 +6,7 @@ namespace Model.DotNetCore.Entities
     {
         public string FullName { get; set; }
         
-        public IList<ProjectContributor> Projects { get; set; }
-        public IList<TaskContributor> Tasks { get; set; }
+        public List<ProjectContributor> Projects { get; set; }
+        public List<TaskContributor> Tasks { get; set; }
     }
 }

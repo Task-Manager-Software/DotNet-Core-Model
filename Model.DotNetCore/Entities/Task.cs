@@ -17,8 +17,8 @@ namespace Model.DotNetCore.Entities
         public byte? SelectedWeekDays { get; set; }
         public string Note { get; set; }
         
-        public IList<TaskContributor> Accounts { get; set; }
-        public IList<Step> Steps { get; set; }
-        public IList<Attachment> Attachments { get; set; }
+        public List<TaskContributor> Accounts { get; set; }
+        public List<Step> Steps { get; set; }
+        public List<Attachment> Attachments { get; set; }
     }
 }
