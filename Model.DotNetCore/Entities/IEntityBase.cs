@@ -2,9 +2,9 @@
 
 namespace Model.DotNetCore.Entities
 {
-    public class EntityBase
+    public interface IEntityBase
     {
         [Key]
-        public int Id { get; set; }
+        int Id { get; set; }
     }
 }

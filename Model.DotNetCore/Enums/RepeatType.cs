@@ -1,4 +1,4 @@
-﻿namespace Model.DotNetCore.Entities
+﻿namespace Model.DotNetCore.Enums
 {
     public enum RepeatType : byte
     {
