@@ -4,7 +4,6 @@
     {
         public int TaskId { get; set; }
         public Task Task { get; set; }
-
         public string Title { get; set; }
     }
 }
