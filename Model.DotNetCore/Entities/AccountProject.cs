@@ -1,12 +1,12 @@
 ﻿namespace Model.DotNetCore.Entities
 {
-    public interface IAccountProject : IEntityBase
+    public class AccountProject : EntityBase
     {
         int AccountId { get; set; }
-        IAccount Account { get; set; }
+        Account Account { get; set; }
         
         int ProjectId { get; set; }
-        IProject Project { get; set; }
+        Project Project { get; set; }
         
         bool IsOwner { get; set; }
         bool IsAccepted { get; set; }

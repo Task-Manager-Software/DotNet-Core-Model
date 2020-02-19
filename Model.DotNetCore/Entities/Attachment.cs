@@ -1,9 +1,9 @@
 ﻿namespace Model.DotNetCore.Entities
 {
-    public interface IAttachment : IAuditableEntityBase
+    public class Attachment : AuditableEntityBase
     {
         int TaskId { get; set; }
-        ITask Task { get; set; }
+        Task Task { get; set; }
         
         string FileName { get; set; }
     }

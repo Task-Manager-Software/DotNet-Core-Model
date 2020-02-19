@@ -1,9 +1,9 @@
 ﻿namespace Model.DotNetCore.Entities
 {
-    public interface IStep : IAuditableEntityBase
+    public class Step : AuditableEntityBase
     {
         int TaskId { get; set; }
-        ITask Task { get; set; }
+        Task Task { get; set; }
         
         string Title { get; set; }
     }

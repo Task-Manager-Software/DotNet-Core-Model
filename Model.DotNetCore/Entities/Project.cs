@@ -2,12 +2,12 @@
 
 namespace Model.DotNetCore.Entities
 {
-    public interface IProject : IAuditableEntityBase
+    public class Project : AuditableEntityBase
     {
         string Title { get; set; }
         bool ShowCompletedTasks { get; set; }
 
-        List<IAccountProject> AccountProjects { get; set; }
-        List<ITask> Tasks { get; set; }
+        List<AccountProject> AccountProjects { get; set; }
+        List<Task> Tasks { get; set; }
     }
 }

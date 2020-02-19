@@ -1,12 +1,12 @@
 ﻿namespace Model.DotNetCore.Entities
 {
-    public interface IAccountTask : IEntityBase
+    public class AccountTask : EntityBase
     {
         int AccountId { get; set; }
-        IAccount Account { get; set; }
+        Account Account { get; set; }
         
         int TaskId { get; set; }
-        ITask Task { get; set; }
+        Task Task { get; set; }
         
         bool IsAccepted { get; set; }
     }

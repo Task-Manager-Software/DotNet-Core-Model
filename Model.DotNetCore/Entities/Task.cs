@@ -4,10 +4,10 @@ using Model.DotNetCore.Enums;
 
 namespace Model.DotNetCore.Entities
 {
-    public interface ITask : IAuditableEntityBase
+    public class Task : AuditableEntityBase
     {
         int ProjectId { get; set; }
-        IProject Project { get; set; }
+        Project Project { get; set; }
         
         string Title { get; set; }
         bool IsMyDay { get; set; }
@@ -18,8 +18,8 @@ namespace Model.DotNetCore.Entities
         byte? SelectedWeekDays { get; set; }
         string Note { get; set; }
         
-        List<IAccountTask> AccountTasks { get; set; }
-        List<IStep> Steps { get; set; }
-        List<IAttachment> Attachments { get; set; }
+        List<AccountTask> AccountTasks { get; set; }
+        List<Step> Steps { get; set; }
+        List<Attachment> Attachments { get; set; }
     }
 }
