@@ -4,9 +4,9 @@ namespace Model.DotNetCore.Entities
 {
     public class Account : EntityBase
     {
-        string FullName { get; set; }
+        public string FullName { get; set; }
 
-        List<AccountProject> AccountProjects { get; set; }
-        List<AccountTask> AccountTasks { get; set; }
+        public List<AccountProject> AccountProjects { get; set; }
+        public List<AccountTask> AccountTasks { get; set; }
     }
 }

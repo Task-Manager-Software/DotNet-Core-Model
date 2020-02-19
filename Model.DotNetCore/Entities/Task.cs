@@ -6,20 +6,20 @@ namespace Model.DotNetCore.Entities
 {
     public class Task : AuditableEntityBase
     {
-        int ProjectId { get; set; }
-        Project Project { get; set; }
-        
-        string Title { get; set; }
-        bool IsMyDay { get; set; }
-        bool IsImportant { get; set; }
-        DateTime? RemindDateUTC { get; set; }
-        DateTime? DueDateUTC { get; set; }
-        RepeatType RepeatType { get; set; }
-        byte? SelectedWeekDays { get; set; }
-        string Note { get; set; }
-        
-        List<AccountTask> AccountTasks { get; set; }
-        List<Step> Steps { get; set; }
-        List<Attachment> Attachments { get; set; }
+        public int ProjectId { get; set; }
+        public Project Project { get; set; }
+
+        public string Title { get; set; }
+        public bool IsMyDay { get; set; }
+        public bool IsImportant { get; set; }
+        public DateTime? RemindDateUTC { get; set; }
+        public DateTime? DueDateUTC { get; set; }
+        public RepeatType RepeatType { get; set; }
+        public byte? SelectedWeekDays { get; set; }
+        public string Note { get; set; }
+
+        public List<AccountTask> AccountTasks { get; set; }
+        public List<Step> Steps { get; set; }
+        public List<Attachment> Attachments { get; set; }
     }
 }

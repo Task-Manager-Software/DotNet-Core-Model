@@ -2,13 +2,13 @@
 {
     public class AccountProject : EntityBase
     {
-        int AccountId { get; set; }
-        Account Account { get; set; }
-        
-        int ProjectId { get; set; }
-        Project Project { get; set; }
-        
-        bool IsOwner { get; set; }
-        bool IsAccepted { get; set; }
+        public int AccountId { get; set; }
+        public Account Account { get; set; }
+
+        public int ProjectId { get; set; }
+        public Project Project { get; set; }
+
+        public bool IsOwner { get; set; }
+        public bool IsAccepted { get; set; }
     }
 }
