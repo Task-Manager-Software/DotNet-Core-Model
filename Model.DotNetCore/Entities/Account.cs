@@ -6,7 +6,7 @@ namespace Model.DotNetCore.Entities
     {
         public string FullName { get; set; }
 
-        virtual public List<AccountProject> AccountProjects { get; set; }
-        virtual public List<AccountTask> AccountTasks { get; set; }
+        public List<AccountProject> AccountProjects { get; set; }
+        public List<AccountTask> AccountTasks { get; set; }
     }
 }
