@@ -4,33 +4,33 @@ namespace Model.DotNetCore.Entities
 {
     public class AuditableEntityBase : EntityBase
     {
-        DateTime CreatedOnUTC { get; set; }
-        
-        int CreatedById { get; set; }
-        Account CreatedBy { get; set; }
-        
-        bool ModifiedFlag { get; set; }
-        DateTime? LastModifiedOnUTC { get; set; }
-        
-        int? LastModifiedById { get; set; }
-        Account LastModifiedBy { get; set; }
-        
-        bool? ArchivedFlag { get; set; }
-        DateTime? ArchivedOnUTC { get; set; }
-        
-        int? ArchivedById { get; set; }
-        Account ArchivedBy { get; set; }
-        
-        bool? DeletedFlag { get; set; }
-        DateTime? DeletedOnUTC { get; set; }
-        
-        int? DeletedById { get; set; }
-        Account DeletedBy { get; set; }
-        
-        bool? InactiveFlag { get; set; }
-        DateTime? InactiveOnUTC { get; set; }
-        
-        int? InactiveById { get; set; }
-        Account InactiveBy { get; set; }
+        public DateTime CreatedOnUTC { get; set; }
+
+        public int CreatedById { get; set; }
+        public Account CreatedBy { get; set; }
+
+        public bool ModifiedFlag { get; set; }
+        public DateTime? LastModifiedOnUTC { get; set; }
+
+        public int? LastModifiedById { get; set; }
+        public Account LastModifiedBy { get; set; }
+
+        public bool? ArchivedFlag { get; set; }
+        public DateTime? ArchivedOnUTC { get; set; }
+
+        public int? ArchivedById { get; set; }
+        public Account ArchivedBy { get; set; }
+
+        public bool? DeletedFlag { get; set; }
+        public DateTime? DeletedOnUTC { get; set; }
+
+        public int? DeletedById { get; set; }
+        public Account DeletedBy { get; set; }
+
+        public bool? InactiveFlag { get; set; }
+        public DateTime? InactiveOnUTC { get; set; }
+
+        public int? InactiveById { get; set; }
+        public Account InactiveBy { get; set; }
     }
 }

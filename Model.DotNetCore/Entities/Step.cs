@@ -2,9 +2,9 @@
 {
     public class Step : AuditableEntityBase
     {
-        int TaskId { get; set; }
-        Task Task { get; set; }
-        
-        string Title { get; set; }
+        public int TaskId { get; set; }
+        public Task Task { get; set; }
+
+        public string Title { get; set; }
     }
 }

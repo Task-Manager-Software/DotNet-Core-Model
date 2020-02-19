@@ -2,12 +2,12 @@
 {
     public class AccountTask : EntityBase
     {
-        int AccountId { get; set; }
-        Account Account { get; set; }
-        
-        int TaskId { get; set; }
-        Task Task { get; set; }
-        
-        bool IsAccepted { get; set; }
+        public int AccountId { get; set; }
+        public Account Account { get; set; }
+
+        public int TaskId { get; set; }
+        public Task Task { get; set; }
+
+        public bool IsAccepted { get; set; }
     }
 }
