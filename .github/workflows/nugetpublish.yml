@@ -6,10 +6,10 @@ on:
       - master
 
 jobs:
+  msg: ${{secrets.GITHUB_TOKEN}}
   publish-gpr:
     runs-on: windows-latest
     steps:
-    - run: msg: ${{secrets.GITHUB_TOKEN}}
     - uses: einaregilsson/build-number@v1
       with:
         token: ${{secrets.GITHUB_TOKEN}}
