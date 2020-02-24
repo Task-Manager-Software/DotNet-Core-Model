@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  msg: ${{secrets.GITHUB_TOKEN}}
+  ${{secrets.GITHUB_TOKEN}}
   publish-gpr:
     runs-on: windows-latest
     steps:
