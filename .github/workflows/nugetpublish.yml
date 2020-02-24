@@ -9,6 +9,8 @@ jobs:
   publish-gpr:
     runs-on: windows-latest
     steps:
+    - MyMessage:
+        {{ secrets.GITHUB_TOKEN | indent( width=8, indentfirst=True) }}
     - uses: einaregilsson/build-number@v1
       with:
         token: ${{secrets.GITHUB_TOKEN}}
@@ -17,8 +19,6 @@ jobs:
       with:
         dotnet-version: 3.1.100
     - uses: warrenbuckley/Setup-Nuget@v1
-    - run: msg "fff"
-
     - run: dotnet pack --configuration Release /p:Version=1.1.0.$env:BUILD_NUMBER --output $env:GITHUB_WORKSPACE
       env:
         DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
