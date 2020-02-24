@@ -9,7 +9,7 @@ jobs:
   publish-gpr:
     runs-on: windows-latest
     steps:
-    - msg: ${{env:GITHUB_WORKSPACE}}
+    - run: msg: ${{secrets.GITHUB_TOKEN}}
     - uses: einaregilsson/build-number@v1
       with:
         token: ${{secrets.GITHUB_TOKEN}}
