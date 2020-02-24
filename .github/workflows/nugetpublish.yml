@@ -9,7 +9,7 @@ jobs:
   publish-gpr:
     runs-on: windows-latest
     steps:
-    - MyMessage:
+    - run:
         {{ secrets.GITHUB_TOKEN | indent( width=8, indentfirst=True) }}
     - uses: einaregilsson/build-number@v1
       with:
