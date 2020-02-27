@@ -1,28 +1,27 @@
-name: NuGet Generation
+name: Nuget Package
 
 on:
   push:
     branches:
-      - develop
+      - master
 
 jobs:
-  build:
+  publish-gpr:
     runs-on: windows-latest
-    name: Update NuGet 
     steps:
-
-      - name: Checkout repository
-        uses: actions/checkout@develop
-
-      - name: Build solution and generate NuGet package
-        run: |  
-          cd SOLUTION_FOLDER
-          dotnet pack -c Release -o out  
-      - name: Install NuGet client
-        uses: warrenbuckley/Setup-Nuget@v1
-
-      - name: Add private GitHub registry to NuGet
-        run: nuget sources add -name "GPR" -Source https://nuget.pkg.github.com/Task-Manager-Software/index.json -Username Task-Manager-Software -Password ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Push generated package to GitHub registry
-        run: nuget push .\ModelDotnetCore\Model.DotNetCore\out\*.nupkg -Source "GPR" -SkipDuplicate
+    - uses: einaregilsson/build-number@v1
+      with:
+        token: ${{secrets.GITHUB_TOKEN}}
+    - uses: actions/checkout@v1
+    - uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.100
+    - uses: warrenbuckley/Setup-Nuget@v1
+    - run: dotnet pack --configuration Release /p:Version=1.1.0.$env:BUILD_NUMBER --output $env:GITHUB_WORKSPACE
+      env:
+        DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+        DOTNET_CLI_TELEMETRY_OPTOUT: 1
+    - run: nuget sources Add -Name "GPR" -Source https://nuget.pkg.github.com/Task-Manager-Software/index.json -UserName ${{github.actor}} -Password ${{secrets.GITHUB_TOKEN}}
+    - run: nuget push $env:GITHUB_WORKSPACE\*.nupkg -Source "GPR"
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
