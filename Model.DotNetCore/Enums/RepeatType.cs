@@ -1,5 +1,6 @@
 ﻿namespace Model.DotNetCore.Enums
 {
+    // dummy commit for testing nuget. #2
     public enum RepeatType : byte
     {
         Never = 0,
